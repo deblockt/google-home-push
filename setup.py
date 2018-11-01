@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="googlehomepush",
-    version="0.0.1",
+    version="0.0.2",
     author="Thomas Deblock",
     author_email="deblock.thomas.62@gmail.com",
     description="library to push text message or sond to Google Home.",
@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/deblockt/google-home-push",
     packages=setuptools.find_packages(),
+    install_requires=list(val.strip() for val in open('requirements.txt')),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
