@@ -103,7 +103,6 @@ class GoogleTTS:
 
         return self.GOOGLE_TTS_URL + "?" + urllib.parse.urlencode(payload)
 
-
 class gTTSError(Exception):
     """Exception that uses context to present a meaningful error message"""
 
@@ -137,3 +136,6 @@ class gTTSError(Exception):
 
         return "%i (%s) from TTS API. Probable cause: %s" % (
             status, reason, cause)
+
+def googleTTS_builder(text, lang = "en-US"):
+    return GoogleTTS(text=text, lang=lang, slow=False).url()

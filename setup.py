@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="googlehomepush",
-    version="0.0.2",
+    version="0.0.3",
     author="Thomas Deblock",
     author_email="deblock.thomas.62@gmail.com",
     description="library to push text message or sond to Google Home.",

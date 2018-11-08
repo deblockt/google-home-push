@@ -3,3 +3,4 @@ py3env
 dist
 *.egg-info
 build
+*.pyc
