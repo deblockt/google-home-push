@@ -23,7 +23,7 @@ class GoogleHome:
                 self.cc = next(filteredChromeCast)
             except StopIteration:
                 availbale_devices = list(map(lambda c: c.device.friendly_name, chromecasts))
-                raise ValueError('Unable to found %s device. Available devices : %s'%(devicename, availbale_devices))
+                raise ValueError('Unable to find %s device. Available devices : %s'%(devicename, availbale_devices))
         elif host != None:
             self.cc = pychromecast.Chromecast(host, port)
         else:
