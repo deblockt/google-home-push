@@ -68,6 +68,7 @@ def serve_file(filename, content_type=None):
     s = socket(AF_INET, SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
     local_ip = s.getsockname()[0]
+    s.close()
     (host, port) = httpd.server_address
 
     return "http://" + local_ip + ":" + str(port)
