@@ -33,7 +33,7 @@ class GoogleHome:
         self.ttsbuilder = ttsbuilder
 
     def say(self, text, lang = 'en-US'):
-        url = u"https://translate.google.com/translate_tts?ie=UTF-8&q=" + text + "%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=14&tk=594228.1040269"
+        url = u"https://translate.google.com/translate_tts?ie=UTF-8&q=" + text + "%21&tl=" + lang + "&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=14&tk=594228.1040269"
         r = requests.get(url)
         self.play(url)
 
