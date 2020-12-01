@@ -50,3 +50,4 @@ Push a sound to Google home
 ## Maintainers
 
 - Thomas Deblock (@tdeblock)
+- Dray-Cyber aswell!
