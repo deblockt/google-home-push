@@ -8,7 +8,7 @@ __all__ = (
 )
 
 class GoogleHome:
-    """x
+    """
         Create a Google home (an host or a devicename is mandatory)
         :param devicename: string : the ip or device name of the Google Home
         :param host: the host of google home
