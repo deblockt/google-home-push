@@ -42,7 +42,7 @@ Push a sound to Google home
 - `contentType` the audi file content type
 
 ### .volume(volumelevel):
-- `volumelevel` the volume level from 0-100 by 0.01 to 1
+- `volumelevel` the volume level from 0-100 by 0.01 to 1 Example: home.volume(volumelevel=0.05 or 5 percent volume. If you want to take it as user input you can do volumelevel=float(input()) the float is required to convert it as it is a decimal.
 
 
 
