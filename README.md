@@ -42,7 +42,7 @@ Push a sound to Google home
 - `contentType` the audi file content type
 
 ### .volume(volumelevel):
-- `volumelevel` the volume level from 0-100
+- `volumelevel` the volume level from 0-100 by 0.01 to 1
 
 
 
