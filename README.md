@@ -6,7 +6,7 @@ Library for Python 3.8+ to push text message or audio file with the Google Home.
 
 ## Installation
 
-    pip install googlehomepush
+    pip install (not done yet making a pypi v2 of googlehomepush)
 
 ## Dependencies
 
@@ -15,10 +15,10 @@ None for now
 ## How to use
 
 ``` python
-from googlehomepush import GoogleHome
+from googlehomepush import GoogleAssistant
 from googlehomepush.http_server import serve_file # for local files
 host = "ip"
-home = GoogleHome(host=host)
+home = GoogleAssistant(host=host)
 home.say("test")
 home.play("http://www.hubharp.com/web_sound/BachGavotteShort.mp3")
 
