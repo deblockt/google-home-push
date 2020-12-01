@@ -1,8 +1,7 @@
 import pychromecast
-import requests as req
-name = "googlehomepush"
-__all__ = 'GoogleHome'
-class GoogleHome:
+name = "googlecontroller"
+__all__ = 'GoogleAssistant'
+class GoogleAssistant:
     def __init__(self, host = None):
         try:
             if host != None:
@@ -16,9 +15,9 @@ class GoogleHome:
         mc = self.cc.media_controller
         mc.play_media(url, contenttype)
         mc.block_until_active()
-    def say(self, text, lang = 'en-US'):
-        url = u"https://translate.google.com/translate_tts?ie=UTF-8&q=" + text + "%21&tl=" + lang + "&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=14&tk=594228.1040269"
-        r = req.get(url)
+    def say(self, text, speed = 1, lang = 'en-US'):
+        speed = str(speed)
+        url = u"https://translate.google.com/translate_tts?ie=UTF-8&q=" + text + "%21&tl=" + lang + "&ttsspeed=" + speed + "&total=1&idx=0&client=tw-ob&textlen=14&tk=594228.1040269"
         self.play(url)
-    def volume(self, volume):
-        self.cc.set_volume(volume)
+    def volume(self, volumelevel):
+        self.cc.set_volume(volumelevel)
