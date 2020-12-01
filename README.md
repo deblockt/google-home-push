@@ -28,11 +28,12 @@ home.volume(100)
 home.volume(0)
 
 ```
-### .say(text, lang = 'en-US')
+### .say(text, speed, lang = 'en-US')
 
 Push a message on Google home
 
 - `text` is the test message to say
+- `speed` is the rate of speed of the message ranges from 0 as slowest to 1 as normal speed.
 - `lang` the text language, default value is 'en'
 
 ### .play(url, contentType = 'audio/mp3'):
@@ -43,7 +44,6 @@ Push a sound to Google home
 
 ### .volume(volumelevel):
 - `volumelevel` the volume level from 0-100 by 0.01 to 1 Example: home.volume(volumelevel=0.05 or 5 percent volume. If you want to take it as user input you can do volumelevel=float(input()) the float is required to convert it as it is a decimal.
-
 
 
 
