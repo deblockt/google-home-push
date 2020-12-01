@@ -33,7 +33,7 @@ home.volume(0)
 Push a message on Google home
 
 - `text` is the test message to say
-- `speed` is the rate of speed of the message ranges from 0 as slowest to 1 as normal speed.
+- `speed` is the rate of speed of the message ranges from 0.000+ as slowest to 1 as normal speed.
 - `lang` the text language, default value is 'en'
 
 ### .play(url, contentType = 'audio/mp3'):
