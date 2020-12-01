@@ -1,5 +1,6 @@
 import pychromecast
 from .googletts import googleTTS_builder
+import requests
 
 name = "googlehomepush"
 __all__ = (
@@ -7,7 +8,7 @@ __all__ = (
 )
 
 class GoogleHome:
-    """
+    """x
         Create a Google home (an host or a devicename is mandatory)
         :param devicename: string : the ip or device name of the Google Home
         :param host: the host of google home
@@ -32,8 +33,9 @@ class GoogleHome:
         self.ttsbuilder = ttsbuilder
 
     def say(self, text, lang = 'en-US'):
-        ttsurl = self.ttsbuilder(text, lang)
-        self.play(ttsurl)
+        url = u"https://translate.google.com/translate_tts?ie=UTF-8&q=" + text + "%21&tl=en-us&ttsspeed=1&total=1&idx=0&client=tw-ob&textlen=14&tk=594228.1040269"
+        r = requests.get(url)
+        self.play(url)
 
     def play(self, url, contenttype = 'audio/mp3'):
         self.cc.wait()
